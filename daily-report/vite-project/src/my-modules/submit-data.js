@@ -1,4 +1,5 @@
-export const submitData = async (e) => {
+// Cloud Firestoreにデータを送信する
+export const submitData = async (e, addDoc, collection, db) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
@@ -14,4 +15,4 @@ export const submitData = async (e) => {
     } catch (e) {
         console.error("Error adding document: ", e);
     }
-};
+}
